@@ -500,163 +500,177 @@ p:hover {
 }
 
 /* ===================================== */
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE */
 /* ===================================== */
 
 /* TABLETS */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px){
 
-  .container {
-    width: 92%;
+  .container{
+    width:95%;
   }
 
-  .beneficios {
-    grid-template-columns: 1fr;
+  .planes{
+    grid-template-columns: repeat(2,1fr);
   }
 
-  .beneficio-wide {
-    grid-column: auto;
+  .media-row{
+    grid-template-columns: repeat(2,1fr);
   }
 
-  .media-row {
-    grid-template-columns: repeat(2, 1fr);
+  .beneficios{
+    grid-template-columns:1fr;
   }
 
-  .planes {
-    grid-template-columns: repeat(2, 1fr);
+  .beneficio-wide{
+    grid-column:auto;
+  }
+
+  .ubicacion{
+    flex-direction:column;
   }
 
   .mapa,
-  .info {
-    width: 100%;
-  }
-
-  .chat {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .formulario,
-  .chatbox {
-    width: 100%;
-    max-width: 500px;
-  }
-
-  .quienes {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .quienes div:first-child {
-    width: 100%;
-  }
-
-  .quienes .box {
-    width: 100%;
-    max-width: 500px;
-  }
-}
-
-/* CELULARES */
-@media screen and (max-width: 768px) {
-
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.4em;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 15px;
+  .info{
     width:100%;
   }
 
-  nav a {
-    width: 100%;
-    text-align: center;
+}
+
+/* CELULAR */
+@media screen and (max-width:768px){
+
+  body{
+    overflow-x:hidden;
   }
 
-  .planes {
-    grid-template-columns: 1fr;
+  .container{
+    width:100%;
+    padding:20px 15px;
   }
 
-  .beneficios {
-    grid-template-columns: 1fr;
+  h1{
+    font-size:2rem;
+    text-align:center;
   }
 
-  .media-row {
-    grid-template-columns: 1fr;
+  h2{
+    font-size:1.4rem;
+  }
+
+  /* NAV */
+
+  nav{
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+  }
+
+  nav a{
+    width:100%;
+    max-width:300px;
+    text-align:center;
+  }
+
+  /* QUIENES */
+
+  .quienes{
+    flex-direction:column;
+  }
+
+  .quienes div:first-child{
+    width:100%;
+  }
+
+  .quienes .box{
+    width:100%;
+    height:250px;
+  }
+
+  /* BENEFICIOS */
+
+  .beneficios{
+    grid-template-columns:1fr;
+  }
+
+  .beneficios .box{
+    height:260px;
+  }
+
+  /* GALERIA */
+
+  .media-row{
+    grid-template-columns:1fr;
   }
 
   .video,
-  .gallery-item {
-    height: 500px;
+  .gallery-item{
+    width:100%;
+    height:500px;
   }
 
-  .ubicacion {
-    flex-direction: column;
+  /* PLANES */
+
+  .planes{
+    grid-template-columns:1fr;
   }
 
-  .mapa,
-  .info {
-    width: 100%;
+  .plan-card{
+    min-height:auto;
+    width:100%;
   }
 
-  table {
-    display: block;
-    overflow-x: auto;
+  /* CHAT */
+
+  .chat{
+    flex-direction:column;
+    align-items:center;
   }
 
-  .container {
-    width: 95%;
-    padding: 20px 10px;
+  .formulario,
+  .chatbox{
+    width:100%;
   }
 
-  .box,
-  .chatbox,
-  .plan-card {
-    width: 100%;
+  /* TABLAS */
+
+  table{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+
+  /* REDES */
+
+  .redes{
+    gap:20px;
   }
 
 }
 
-/* CELULARES PEQUEÑOS */
-@media screen and (max-width: 480px) {
+/* TELEFONOS PEQUEÑOS */
+@media screen and (max-width:480px){
 
-  h1 {
-    font-size: 1.7em;
+  h1{
+    font-size:1.7rem;
   }
 
-  p {
-    font-size: 0.95em;
+  h2{
+    font-size:1.2rem;
   }
 
-  .plan-cta {
-    padding: 12px;
-    font-size: 0.9em;
-  }
-
-  .formulario input,
-  .formulario textarea,
-  .formulario button {
-    font-size: 0.95em;
+  p{
+    font-size:0.95rem;
   }
 
   .video,
-  .gallery-item {
-    height: 420px;
+  .gallery-item{
+    height:420px;
   }
 
-  .plan-card {
-    min-height: auto;
-    padding: 25px 18px;
-  }
-
-  .plan-price {
-    font-size: 1.7em;
+  .plan-price{
+    font-size:1.6rem;
   }
 
 }
