@@ -502,6 +502,18 @@ p:hover {
 /* ===================================== */
 /* RESPONSIVE */
 /* ===================================== */
+/* EFECTO FONDO */
+
+.background-glow{
+  position:fixed;
+  width:600px;
+  height:600px;
+  background:rgba(242,190,34,0.08);
+  filter:blur(120px);
+  top:-200px;
+  right:-150px;
+  z-index:-1;
+}
 
 /* TABLETS */
 @media screen and (max-width: 1024px){
