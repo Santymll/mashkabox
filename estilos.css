@@ -1,18 +1,6 @@
-/* ===================================== */
-/* VARIABLES */
-/* ===================================== */
-
-:root {
-  --color-principal: #F2BE22;
-  --fondo: #0a0a0a;
-  --fondo-secundario: rgba(255,255,255,0.04);
-  --texto: #ffffff;
-}
-
-
-/* ===================================== */
+/* ================================= */
 /* RESET */
-/* ===================================== */
+/* ================================= */
 
 *{
   margin:0;
@@ -24,490 +12,30 @@ html{
   scroll-behavior:smooth;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: linear-gradient(135deg, #000, #111);
-  color: var(--texto);
-  overflow-x: hidden;
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:#0a0a0a;
+  color:white;
+  overflow-x:hidden;
 }
 
-/* ===================================== */
-/* CONTENEDOR */
-/* ===================================== */
+/* ================================= */
+/* VARIABLES */
+/* ================================= */
 
-.container {
-  width: 85%;
-  margin: auto;
-  padding: 40px 20px;
+:root{
+  --color-principal:#F2BE22;
+  --fondo-secundario:rgba(255,255,255,0.05);
 }
 
-/* ===================================== */
-/* HEADER */
-/* ===================================== */
-
-header {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* ===================================== */
-/* NAV */
-/* ===================================== */
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: var(--color-principal);
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 30px;
-  transition: 0.3s;
-  font-weight: 600;
-}
-
-nav a:hover {
-  background: var(--color-principal);
-  color: black;
-  box-shadow: 0 0 15px var(--color-principal);
-}
-
-/* ===================================== */
-/* TITULOS */
-/* ===================================== */
-
-h1 {
-  color: var(--color-principal);
-  font-size: 2.8em;
-  margin-bottom: 10px;
-}
-
-h2 {
-  border-left: 5px solid var(--color-principal);
-  padding-left: 12px;
-  margin-top: 70px;
-  margin-bottom: 35px;
-  font-size: 2em;
-}
-
-/* ===================================== */
-/* CONTENEDORES */
-/* ===================================== */
-
-.box,
-.plan-card,
-.chatbox,
-.gallery-item,
-.video {
-  background: var(--fondo-secundario);
-  border-radius: 22px;
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  backdrop-filter: blur(10px);
-  transition: 0.4s;
-  overflow: hidden;
-}
-
-/* ===================================== */
-/* IMAGENES */
-/* ===================================== */
-
-img {
-  width: 100%;
-  display: block;
-}
-
-/* ===================================== */
-/* EFECTOS */
-/* ===================================== */
-
-.box img,
-.chatbox img,
-.gallery-item img {
-  transition: transform 0.5s ease;
-}
-
-.box:hover img,
-.chatbox:hover img,
-.gallery-item:hover img {
-  transform: scale(1.08);
-}
-
-/* ===================================== */
-/* QUIENES */
-/* ===================================== */
-
-.quienes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  margin-top: 40px;
-  flex-wrap: wrap;
-}
-
-.quienes div:first-child {
-  width: 500px;
-}
-
-.quienes .box {
-  width: 420px;
-  height: 270px;
-}
-
-.quienes .box img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* ===================================== */
-/* BENEFICIOS */
-/* ===================================== */
-
-.beneficios {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 40px;
-  margin: 40px auto 0;
-  max-width: 1200px;
-}
-
-.beneficio-item {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.beneficios .box {
-  width: 100%;
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.beneficios .box img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-.beneficio-wide {
-  grid-column: 2;
-}
-
-/* ===================================== */
-/* GALERIA */
-/* ===================================== */
-
-.media-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  margin-top: 40px;
-  align-items: stretch;
-}
-
-/* GALERIA */
-.gallery {
-  display: contents;
-}
-
-/* ITEMS */
-.video,
-.gallery-item {
-  width: 100%;
-  height: 430px;
-}
-
-/* HOVER */
-.video:hover,
-.gallery-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(242,190,34,0.35);
-}
-
-/* VIDEO */
-.video-frame {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 22px;
-}
-
-.video-frame iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-}
-
-/* IMAGENES */
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* ===================================== */
-/* PLANES */
-/* ===================================== */
-
-.planes {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 25px;
-  margin-top: 50px;
-  align-items: stretch;
-}
-
-.plan-card {
-
-  background: linear-gradient(
-    145deg,
-    rgba(255,255,255,0.04),
-    rgba(255,255,255,0.02)
-  );
-
-  padding: 30px 22px;
-
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  min-height: 450px;
-}
-
-/* HOVER */
-.plan-card:hover {
-  transform: translateY(-12px) scale(1.03);
-  border-color: rgba(242,190,34,0.4);
-  box-shadow: 0 0 30px rgba(242,190,34,0.3);
-}
-
-/* TITULO */
-.plan-card h3 {
-  font-size: 1.4em;
-  margin-bottom: 15px;
-}
-
-/* PRECIO */
-.plan-price {
-  font-size: 2em;
-  font-weight: bold;
-  color: var(--color-principal);
-  margin-bottom: 25px;
-}
-
-/* LISTA */
-.plan-features {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  text-align: left;
-}
-
-.plan-features li {
-  position: relative;
-  padding-left: 28px;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.92);
-}
-
-/* CHECK */
-.plan-features li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--color-principal);
-  font-weight: bold;
-}
-
-/* BOTON */
-.plan-cta {
-  display: inline-block;
-  width: 100%;
-  padding: 15px;
-  border-radius: 14px;
-
-  background: var(--color-principal);
-  color: black;
-
-  font-weight: bold;
-  text-decoration: none;
-
-  transition: 0.3s;
-}
-
-.plan-cta:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 20px var(--color-principal);
-}
-
-/* ===================================== */
-/* TABLAS */
-/* ===================================== */
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 40px;
-}
-
-th {
-  background: var(--color-principal);
-  color: black;
-}
-
-th,
-td {
-  padding: 14px;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-/* ===================================== */
-/* UBICACION */
-/* ===================================== */
-
-.ubicacion {
-  display: flex;
-  gap: 30px;
-  margin-top: 80px;
-  flex-wrap: wrap;
-}
-
-.mapa,
-.info {
-  width: 48%;
-}
-
-/* ===================================== */
-/* CHAT */
-/* ===================================== */
-
-.chat {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 50px;
-  flex-wrap: wrap;
-}
-
-.formulario {
-  width: 380px;
-}
-
-.formulario input,
-.formulario textarea {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 14px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.1);
-  background: rgba(255,255,255,0.03);
-  color: white;
-  transition: 0.3s;
-  font-family: inherit;
-}
-
-.formulario textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.formulario input:focus,
-.formulario textarea:focus {
-  outline: none;
-  border: 1px solid var(--color-principal);
-  box-shadow: 0 0 10px var(--color-principal);
-}
-
-.formulario button {
-  width: 100%;
-  padding: 14px;
-  background: var(--color-principal);
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.formulario button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px var(--color-principal);
-}
-
-.chatbox {
-  width: 380px;
-  height: 250px;
-}
-
-/* ===================================== */
-/* REDES */
-/* ===================================== */
-
-.redes {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
-  flex-wrap: wrap;
-}
-
-.redes a {
-  color: inherit;
-  text-decoration: none;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.redes img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  transition: 0.3s;
-}
-
-.redes img:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 15px var(--color-principal);
-}
-
-/* ===================================== */
-/* TEXTO */
-/* ===================================== */
-
-p:hover {
-  color: var(--color-principal);
-}
-
-/* ===================================== */
-/* RESPONSIVE */
-/* ===================================== */
-/* EFECTO FONDO */
+/* ================================= */
+/* FONDO */
+/* ================================= */
 
 .background-glow{
   position:fixed;
-  width:600px;
-  height:600px;
+  width:500px;
+  height:500px;
   background:rgba(242,190,34,0.08);
   filter:blur(120px);
   top:-200px;
@@ -515,174 +43,406 @@ p:hover {
   z-index:-1;
 }
 
-/* TABLETS */
-@media screen and (max-width: 1024px){
+/* ================================= */
+/* CONTENEDOR */
+/* ================================= */
+
+.container{
+  width:90%;
+  max-width:1400px;
+  margin:auto;
+  padding:30px 0;
+}
+
+/* ================================= */
+/* HEADER */
+/* ================================= */
+
+header{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+h1{
+  color:var(--color-principal);
+  font-size:3rem;
+}
+
+h2{
+  margin:60px 0 25px;
+  border-left:5px solid var(--color-principal);
+  padding-left:12px;
+}
+
+/* ================================= */
+/* NAV */
+/* ================================= */
+
+nav{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+nav a{
+  color:var(--color-principal);
+  text-decoration:none;
+  padding:10px 18px;
+  border-radius:30px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  background:var(--color-principal);
+  color:black;
+}
+
+/* ================================= */
+/* CAJAS */
+/* ================================= */
+
+.box,
+.plan-card,
+.gallery-item,
+.video,
+.chatbox{
+  background:var(--fondo-secundario);
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.08);
+  transition:0.4s;
+}
+
+.box:hover,
+.plan-card:hover,
+.gallery-item:hover,
+.video:hover{
+  transform:translateY(-5px);
+}
+
+/* ================================= */
+/* IMAGENES */
+/* ================================= */
+
+img{
+  width:100%;
+  display:block;
+}
+
+/* ================================= */
+/* QUIENES */
+/* ================================= */
+
+.quienes{
+  display:flex;
+  gap:40px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.quienes div{
+  flex:1;
+  min-width:280px;
+}
+
+.quienes .box{
+  height:320px;
+}
+
+.quienes img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ================================= */
+/* BENEFICIOS */
+/* ================================= */
+
+.beneficios{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.beneficios .box{
+  height:320px;
+}
+
+.beneficios img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ================================= */
+/* GALERIA */
+/* ================================= */
+
+.media-row{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.video,
+.gallery-item{
+  height:430px;
+}
+
+.video-frame{
+  width:100%;
+  height:100%;
+}
+
+.video-frame iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ================================= */
+/* PLANES */
+/* ================================= */
+
+.planes{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:20px;
+}
+
+.plan-card{
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.plan-price{
+  color:var(--color-principal);
+  font-size:2rem;
+  margin:15px 0;
+}
+
+.plan-features{
+  list-style:none;
+  margin:20px 0;
+}
+
+.plan-features li{
+  margin-bottom:12px;
+}
+
+.plan-cta{
+  background:var(--color-principal);
+  color:black;
+  text-decoration:none;
+  padding:14px;
+  border-radius:12px;
+  text-align:center;
+  font-weight:bold;
+}
+
+/* ================================= */
+/* UBICACION */
+/* ================================= */
+
+.ubicacion{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.mapa,
+.info{
+  flex:1;
+  min-width:300px;
+}
+
+.mapa{
+  height:400px;
+}
+
+/* ================================= */
+/* CONTACTO */
+/* ================================= */
+
+.chat{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.formulario,
+.chatbox{
+  flex:1;
+  min-width:300px;
+}
+
+.chatbox{
+  height:350px;
+}
+
+.chatbox img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.formulario input,
+.formulario textarea{
+  width:100%;
+  margin-bottom:15px;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:rgba(255,255,255,0.06);
+  color:white;
+}
+
+.formulario button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:var(--color-principal);
+  font-weight:bold;
+}
+
+/* ================================= */
+/* REDES */
+/* ================================= */
+
+.redes{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+.redes a{
+  text-decoration:none;
+  color:white;
+  text-align:center;
+}
+
+.redes img{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+}
+
+/* ================================= */
+/* TABLAS */
+/* ================================= */
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+}
+
+th,
+td{
+  border:1px solid rgba(255,255,255,0.1);
+  padding:12px;
+  text-align:center;
+}
+
+th{
+  background:var(--color-principal);
+  color:black;
+}
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+@media(max-width:1100px){
+
+  .planes{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .media-row{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:768px){
 
   .container{
     width:95%;
   }
 
-  .planes{
-    grid-template-columns: repeat(2,1fr);
+  h1{
+    font-size:2.2rem;
   }
 
-  .media-row{
-    grid-template-columns: repeat(2,1fr);
+  nav{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  nav a{
+    width:100%;
+    max-width:280px;
+    text-align:center;
   }
 
   .beneficios{
     grid-template-columns:1fr;
   }
 
-  .beneficio-wide{
-    grid-column:auto;
+  .planes{
+    grid-template-columns:1fr;
+  }
+
+  .media-row{
+    grid-template-columns:1fr;
+  }
+
+  .video,
+  .gallery-item{
+    height:500px;
+  }
+
+  .quienes{
+    flex-direction:column;
   }
 
   .ubicacion{
     flex-direction:column;
   }
 
-  .mapa,
-  .info{
-    width:100%;
-  }
-
-}
-
-/* CELULAR */
-@media screen and (max-width:768px){
-
-  body{
-    overflow-x:hidden;
-  }
-
-  .container{
-    width:100%;
-    padding:20px 15px;
-  }
-
-  h1{
-    font-size:2rem;
-    text-align:center;
-  }
-
-  h2{
-    font-size:1.4rem;
-  }
-
-  /* NAV */
-
-  nav{
-    width:100%;
-    flex-direction:column;
-    align-items:center;
-    gap:12px;
-  }
-
-  nav a{
-    width:100%;
-    max-width:300px;
-    text-align:center;
-  }
-
-  /* QUIENES */
-
-  .quienes{
-    flex-direction:column;
-  }
-
-  .quienes div:first-child{
-    width:100%;
-  }
-
-  .quienes .box{
-    width:100%;
-    height:250px;
-  }
-
-  /* BENEFICIOS */
-
-  .beneficios{
-    grid-template-columns:1fr;
-  }
-
-  .beneficios .box{
-    height:260px;
-  }
-
-  /* GALERIA */
-
-  .media-row{
-    grid-template-columns:1fr;
-  }
-
-  .video,
-  .gallery-item{
-    width:100%;
-    height:500px;
-  }
-
-  /* PLANES */
-
-  .planes{
-    grid-template-columns:1fr;
-  }
-
-  .plan-card{
-    min-height:auto;
-    width:100%;
-  }
-
-  /* CHAT */
-
   .chat{
     flex-direction:column;
-    align-items:center;
-  }
-
-  .formulario,
-  .chatbox{
-    width:100%;
-  }
-
-  /* TABLAS */
-
-  table{
-    display:block;
-    overflow-x:auto;
-    white-space:nowrap;
-  }
-
-  /* REDES */
-
-  .redes{
-    gap:20px;
   }
 
 }
 
-/* TELEFONOS PEQUEÑOS */
-@media screen and (max-width:480px){
+@media(max-width:480px){
 
   h1{
-    font-size:1.7rem;
+    font-size:1.8rem;
   }
 
   h2{
-    font-size:1.2rem;
-  }
-
-  p{
-    font-size:0.95rem;
+    font-size:1.3rem;
   }
 
   .video,
   .gallery-item{
     height:420px;
-  }
-
-  .plan-price{
-    font-size:1.6rem;
   }
 
 }
